@@ -22,3 +22,29 @@ pub fn to_decimal(mut num: i32) -> i32 {
     // return the result
     return res;
 }
+
+// function to convert from decimal to binary
+pub fn to_binary(mut num: i32) -> i32 {
+    // variables for the result, remainder, and base
+    let mut res: i32 = 0;
+    let mut rem: i32;
+    let mut base: i32 = 1;
+
+    while num > 0 {
+        // store the remainder into a variable
+        rem = num % 2;
+
+        // divide number by 10
+        num /= 2;
+
+        // multiply the remainder by a base of 2 and add to result
+        res += rem * base;
+
+        // multiply the base by 2 to update it to the correct power
+        base *= 10;
+    }
+
+    // return the result
+    return res;
+
+}

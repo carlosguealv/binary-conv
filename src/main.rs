@@ -8,8 +8,6 @@ use clap::Parser;
 use args::Arguments;
 
 fn main() {
-    let args = Arguments::parse();
-
     println!("Input a number to convert...");
 
     let mut input = String::new();
